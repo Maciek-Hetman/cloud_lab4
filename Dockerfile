@@ -4,7 +4,7 @@
 FROM ubuntu:latest
 LABEL org.opencontainers.image.authors="s101572@pollub.edu.pl"
 
-# Aktualizacje, czyszczenie apt i domyslnej strony apache
+# Aktualizacje, czyszczenie apt i domyslnej strony apache w jednej komendzie żeby nie tworzyć zbyt wielu warstw
 RUN apt-get update \
     && apt-get install -y --no-install-recommends apache2 \ 
     && apt-get clean \
